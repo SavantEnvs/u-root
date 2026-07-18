@@ -1,0 +1,2 @@
+kernel=bzImage
+	initrd=initramfs.cpio

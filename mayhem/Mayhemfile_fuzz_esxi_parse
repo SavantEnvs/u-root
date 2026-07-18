@@ -1,0 +1,9 @@
+project: savantenvs/u-root
+target: fuzz_esxi_parse
+cmds:
+  - cmd: /mayhem/fuzz_esxi_parse
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/esxi.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_esxi_parse/testsuite

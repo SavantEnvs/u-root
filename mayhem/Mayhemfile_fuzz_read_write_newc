@@ -1,0 +1,9 @@
+project: savantenvs/u-root
+target: fuzz_read_write_newc
+cmds:
+  - cmd: /mayhem/fuzz_read_write_newc
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/cpio.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_read_write_newc/testsuite

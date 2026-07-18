@@ -1,0 +1,8 @@
+project: savantenvs/u-root
+target: fuzz_write_read_in_mem_archive
+cmds:
+  - cmd: /mayhem/fuzz_write_read_in_mem_archive
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_write_read_in_mem_archive/testsuite

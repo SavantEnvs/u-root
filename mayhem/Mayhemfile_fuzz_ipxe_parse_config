@@ -1,0 +1,9 @@
+project: savantenvs/u-root
+target: fuzz_ipxe_parse_config
+cmds:
+  - cmd: /mayhem/fuzz_ipxe_parse_config
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/ipxe.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ipxe_parse_config/testsuite
